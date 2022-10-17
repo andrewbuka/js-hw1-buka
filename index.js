@@ -80,7 +80,7 @@ const findDaysInMonth = (month, year) => {
   }
 
   else if (month === 2) {
-    if (year % 4 === 0 || year % 100 === 0 || year % 400 === 0) {
+    if (year % 4 === 0) {
       return 'The Month has 29 days';
     }
 
@@ -137,74 +137,18 @@ const calculateResult = (num1, num2, operation) => {
 // Create multiply table multiplying all digits from 2 t0 9 on 1 - 10 and write result in string
 const getMultiplicationTable = () => {
   // write code here
-  let a, b, c, d, e, f, g, h = null;
+  let a = '';
+
   for (let i = 2; i <= 9; i++){
-    if (i === 2 ) {
-      a = `==== ${i} ==== \n`;              
-    }  
+    
+    a += `==== ${i} ==== \n`;         
 
-    if (i === 3) {
-      b = `==== ${i} ==== \n`;
-    } 
-    if (i === 4) {
-      c = `==== ${i} ==== \n`;
-    } 
-    if (i === 5) {
-      d = `==== ${i} ==== \n`;
-    } 
-
-    if (i === 6) {
-      e = `==== ${i} ==== \n`;
-    } 
-
-    if (i === 7) {
-      f = `==== ${i} ==== \n`;
-    } 
-
-    if (i === 8) {
-      g = `==== ${i} ==== \n`;
-    } 
-
-    if (i === 9) {
-      h = `==== ${i} ==== \n`;
-    } 
-  
-    for (let j =1; j <=10; j++){
-
-      if (j <=10 && j >= 1 && i === 2) {
-        a += `${i} * ${j} = ${i * j} \n`;
-      } 
-      
-      if (j <= 10 && j >= 1 && i === 3) {
-        b += `${i} * ${j} = ${i * j} \n`;
-      } 
-      
-      if (j <= 10 && j >= 1 && i === 4) {
-        c += `${i} * ${j} = ${i * j} \n`;
-      } 
-
-      if (j <= 10 && j >= 1 && i === 5) {
-        d += `${i} * ${j} = ${i * j} \n`;
-      } 
-
-      if (j <= 10 && j >= 1 && i === 6) {
-        e += `${i} * ${j} = ${i * j} \n`;
-      } 
-
-      if (j <= 10 && j >= 1 && i === 7) {
-        f += `${i} * ${j} = ${i * j} \n`;
-      } 
-      if (j <= 10 && j >= 1 && i === 8) {
-        g += `${i} * ${j} = ${i * j} \n`;
-      } 
-
-      if (j <= 10 && j >= 1 && i === 9) {
-        h += `${i} * ${j} = ${i * j} \n`;
-      }       
+    for (let j =1; j <=10; j++){      
+      a += `${i} * ${j} = ${i * j} \n`;      
     }
   }
   
-  return a + b + c + d + e + f + g + h;
+  return a;
 };
 
 module.exports = {
