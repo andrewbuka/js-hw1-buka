@@ -137,13 +137,15 @@ const calculateResult = (num1, num2, operation) => {
 // Create multiply table multiplying all digits from 2 t0 9 on 1 - 10 and write result in string
 const getMultiplicationTable = () => {
   // write code here
+  
   let a = '';
 
-  for (let i = 2; i <= 9; i++){
-    
+  for (let i = 2; i <= 9; i++) {
+
     a += `==== ${i} ==== \n`;         
 
     for (let j =1; j <=10; j++){      
+      
       a += `${i} * ${j} = ${i * j} \n`;      
     }
   }
